@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <title>CRUDS</title>
+</head>
+
+<body>
+    <section class="sectionOne">
+        <!-- header -->
+        <header>
+            <h1>cruds</h1>
+            <p>product management system</p>
+        </header>
+        <!-- form -->
+        <div class="formCruds">
+            <form action="#">
+              <input type="text" placeholder="title" id="title">
+              <!--Price -->
+              <div class="price">
+                <input type="number" name="" id="Price" placeholder="Price" onkeyup="getTotal()">
+                <input type="number" name="" id="taxes" placeholder="taxes" onkeyup="getTotal()">
+                <input type="number" name="" id="ads" placeholder="ads" onkeyup="getTotal()">
+                <input type="number" name="" id="discount" placeholder="discount" onkeyup="getTotal()">
+                <span id="total"></span>
+              </div>
+
+                <input type="number" name="" id="count" placeholder="count">
+                <input type="text" placeholder="catogray" id="catogray">
+                <button id="submit">Cteate</button>
+                
+               <input type="search" name="" id="search" placeholder="Search" onkeyup="searchData(this.value)">
+               <div class="search">
+                <button onclick="search_id(this.id)" id="searchTitle">Search By Title</button>
+                <button onclick="search_id(this.id)" id="searchCatogray">Search By Catogray</button>
+               </div>
+                <div id="delete_all"></div>
+
+            </form>
+        </div>
+        <!-- table -->
+        <div>
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>catogray</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+               <tbody id="tbody">
+                      
+               </tbody>
+              
+            </table>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
